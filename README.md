@@ -46,6 +46,13 @@ make            # builds shared lib (e.g. cimgui.dylib / cimgui.so)
 make static     # builds libcimgui.a
 ```
 
+## Future Considerations
+
+- Keep current vendored dependency strategy for now (stable and reproducible).
+- Revisit migrating `third_party/sokol` to a Zig package dependency.
+- If/when `cimgui` provides first-class Zig package metadata, evaluate replacing vendored `third_party/cimgui` with package-managed dependency resolution.
+- Optionally replace manual `-Demsdk=<path>` usage with an explicit package-managed `emsdk` dependency in build configuration.
+
 ## Design And Architecture
 
 ```mermaid
