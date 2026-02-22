@@ -34,6 +34,11 @@ jobs:
           /tmp/emsdk/emsdk install 4.0.14
           /tmp/emsdk/emsdk activate 4.0.14
 
+      - name: Ensure emsdk python path expected by build.zig
+        run: |
+          mkdir -p /tmp/emsdk/python/3.13.3_64bit/bin
+          ln -sf "$(command -v python3)" /tmp/emsdk/python/3.13.3_64bit/bin/python3
+
       - name: Build web bundle
         run: zig build web -Demsdk=/tmp/emsdk
 
