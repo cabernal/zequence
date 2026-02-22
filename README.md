@@ -122,6 +122,18 @@ python3 -m http.server 8080 --directory zig-out/web
 Then open:
 - `http://localhost:8080/zequence.html`
 
+## Deploy Web Build To GitHub Pages
+
+This repo includes `.github/workflows/deploy-pages.yml` to publish the web build on pushes to `main`.
+
+Expected custom domain:
+- `zequence.cbrnl.com`
+
+Setup once in GitHub:
+1. Open repo `Settings` -> `Pages`
+2. Under `Build and deployment`, set `Source` to `GitHub Actions`
+3. Ensure DNS has `CNAME` `zequence` -> `cabernal.github.io`
+
 ## Emsdk Setup (If Needed)
 
 ```bash
