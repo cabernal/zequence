@@ -1,0 +1,15 @@
+.{
+    .name = .zequence,
+    .version = "0.1.0",
+    .fingerprint = 0x4dc9cc002c1b58c7,
+    .minimum_zig_version = "0.15.2",
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "README.md",
+        "src",
+        "third_party",
+        "web",
+        "assets",
+    },
+}
